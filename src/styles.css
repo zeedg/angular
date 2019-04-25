@@ -1,0 +1,13 @@
+/* You can add global styles to this file, and also import other style files */
+.socialmediaicons {}
+
+.socialmediaicons img {max-width: 20px;}
+
+#slideshow_advance, #mega-1 {display: none !important;}
+
+#myCarousel {}
+
+#myCarousel img {
+    max-height: 300px;
+    width: 100%;
+}

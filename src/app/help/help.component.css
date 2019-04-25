@@ -1,0 +1,88 @@
+@media only screen and (max-width: 1024px)
+{
+	.col-md-8 
+	{
+		width: 65%;
+	}
+	.boxes .blue-title
+	{
+		font-size: 15px;
+		margin-bottom: 5px;
+	}
+	.boxes li
+	{
+		font-size: 100%;
+		margin: 2px 0;
+	}
+	.medical-help .help-title
+	{
+		font-size: 30px;
+		margin-bottom: 50px;
+	}
+	.topics .orange-title
+	{
+		font-size: 22px;
+	}
+	.topics p 
+	{
+		font-size: 18px;
+		color: #0172ff;
+		text-align: left;
+		line-height: 28px;
+	}
+}
+@media (max-width: 768px)
+{
+	.col-md-3 {
+		width: 25%;
+	}
+	.col-md-4 {
+		width: 33.3%;
+	}
+	.col-md-6 {
+		width: 50%;
+	}
+	.col-md-8 {
+		width: 66%;
+	}
+	.col-md-9 {
+		width: 75%;
+	}
+}
+@media (max-width: 480px)
+{
+	.medical-help .help-title 
+	{
+    	font-size: 18px;
+    	margin-bottom: 30px;
+	}
+	.col-md-3 {
+		width: 25%;
+	}
+	.col-md-4 {
+		width: 100%;
+	}
+	.box-img
+	{
+		width: 33.3%;
+	}
+	.col-md-6 {
+		width: 100%;
+	}
+	.col-md-8 {
+		width: 66%;
+	}
+	.col-md-9 {
+		width: 65%;
+	}
+	.center-div
+	{
+		width: 100%;
+	}
+	.topics .orange-title 
+	{
+    	font-size: 24px;
+		margin-bottom: 10px;
+		text-align: left;
+	}
+}

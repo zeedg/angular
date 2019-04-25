@@ -1,0 +1,95 @@
+<div class="container">
+  <div class="row main-contant">
+    <div class="container contant-con">
+      <div class="col-lg-12">
+        <div class="bodyinner">
+          <h1 class="h1">Customer Account LogIn</h1>
+          <form (ngSubmit)="onSignin(f)" #f="ngForm">
+            <div class="col-lg-6" id="login_tbl">
+              <table class="tbl">
+                <tr>
+                  <td>
+                    <input
+                      type="text"
+                      class="inqury_ipput"
+                      name="email"
+                      id="name"
+                      ngModel
+                      required
+                      email
+                      #email="ngModel"
+                      placeholder="Email Address"
+                    />
+                  </td>
+                  <td 
+                    *ngIf="!email.valid && email.touched"  
+                    class="help-block red_color"
+                  >Please select a valid email
+                  </td>
+                </tr>
+                <tr>
+                  <td>
+                    <input
+                      type="password"
+                      class="inqury_ipput"
+                      name="password"
+                      id="password"
+                      placeholder="Password"
+                      #password="ngModel"
+                      required
+                      ngModel
+                    />
+                  </td>
+                  <td *ngIf="!password.valid && password.touched" class="help-block red_color">Please select a valid password</td>
+                </tr>
+                <tr>
+                  <td>
+                    <input 
+                      type="submit" 
+                      class="signin_btn" 
+                      value="Sign In" 
+                      [disabled]="!f.valid"
+                    />
+                  </td>
+                </tr>
+                <tr class="text-left">
+                  <td>
+                    <label
+                      >Forgot your Password?
+                      <a
+                        href="https://www.medicalshipment.com/index.php?controller=login&function=forget"
+                        >Click Here</a
+                      ></label
+                    >
+                  </td>
+                </tr>
+              </table>
+            </div>
+            <div class="col-lg-6" id="create_account">
+              <table class="tbl">
+                <tr>
+                  <td>&nbsp;</td>
+                </tr>
+                <tr>
+                  <td>
+                    <label class="right_tbl_opt"
+                      >New To Medicalshipment.Com?
+                      <a
+                        href="https://www.medicalshipment.com/index.php?controller=register&function=index"
+                        >Create Account</a
+                      >
+                    </label>
+                  </td>
+                </tr>
+              </table>
+            </div>
+          </form>
+        </div>
+
+        <!--bodycontent-->
+
+        <p>&nbsp;<br /></p>
+      </div>
+    </div>
+  </div>
+</div>

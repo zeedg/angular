@@ -1,0 +1,55 @@
+input, button, select, textarea {
+	width: 50%;
+	height: 35px;
+}
+.inqury_ipput {
+    background: url("../../../assets/images/input_bgs.png") no-repeat;
+    color: #000;
+	font-family: arial !important;
+	font-size: 18px !important;
+	height: 36px !important;
+	padding: 0 15px 0 14px !important;
+    width: 390px !important;
+    border: 0;
+}
+select.inqury_ipput {
+	background: url("../../../assets/images/selexcr_imh.jpg")!important;
+	width: 230px !important;
+	line-height: 1;
+	border: 0;
+	border-radius: 0;
+	height: 36px;
+	-webkit-appearance: none;
+	padding: 6px 10px 6px 10px;
+	/* color: #a1a2a5;*/
+	font-size: 18px;
+	outline: none;
+}
+.text_areaabg {
+	background: url("../../../assets/images/text_areabg.png")!important;
+	width: 491px;
+	height: 96px;
+	border: none;
+	color: #a1a2a5;
+	font-size: 18px;
+	font-family: Arial, Helvetica, sans-serif;
+	padding: 6px 0 0 9px;
+	margin-top: 20px;
+}
+input:focus {
+	border: 1px solid #007dc6 !important;
+}
+.inqury_ipput:focus {
+	background-color: #fff !important;
+	background-image: none !important;
+	border: 2px solid rgb(48, 129, 190) !important;
+	box-shadow: 0 0 10px #1e7ec8 !important;
+	height: 36px !important;
+}
+.signin_btn{
+	width:190px;
+	border-radius: 7px;
+}
+.h1 {
+	text-align: left;
+}

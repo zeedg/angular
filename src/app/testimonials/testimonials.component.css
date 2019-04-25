@@ -1,0 +1,16 @@
+.submit_quote {
+	float: right;
+	font-weight: bold;
+	margin-bottom: 0.4em;
+	margin-right: 0.4em;
+	margin-top: 15px;
+}
+.submit_quote a {
+	font-size: 18px;
+}
+body {
+	font-size: inherit !important;
+}
+p {
+	font-style: normal
+}

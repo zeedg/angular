@@ -1,0 +1,24 @@
+<nav id="primary_nav_wrap" class="dcjq-vertical-mega-menu">
+  <ul>
+  <li><a href="#">Shop by <br/><strong>Category</strong><span class="caret"></span></a>
+  <ul class="menu">
+      <li   *ngFor="let category of categories">
+        <ng-container *ngIf="category">
+          <a> {{category.category_title}} <span class="dc-mega-icon"></span></a>
+          <ul class="sub">
+            <li  *ngFor="let subCat of category.sub_cats">
+              <ng-container *ngIf="subCat">                         
+                <a>{{subCat.category_title}}</a>
+              </ng-container>
+            </li>
+          </ul>
+        </ng-container>
+          
+      </li>
+    </ul>  
+    </li>
+    </ul>
+</nav>
+            	
+                
+      

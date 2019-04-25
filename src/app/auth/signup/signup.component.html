@@ -1,0 +1,85 @@
+<div class="container">
+  <div class="row main-contant">
+    <div class="container contant-con">
+      <h1 class="h1">User Registration</h1>
+      <div class="col-md-6" id="register">
+        <p style="color:red;" *ngIf="error">Show error message here</p>
+        <p style="color:green;" *ngIf="success">Show success message here</p>
+        <form (ngSubmit)="onSignup(f)" #f="ngForm">
+          <br />
+          <div class="form-group">
+            <input
+              type="text"
+              class="inqury_ipput"
+              name="fname"
+              placeholder="First Name"
+              required
+              ngModel
+            />
+          </div>
+          <div class="form-group">
+            <input
+              type="text"
+              class="inqury_ipput"
+              name="lname"
+              placeholder="Last Name"
+              required
+              ngModel
+            />
+          </div>
+          <div class="form-group">  
+            <input
+              type="email"
+              class="inqury_ipput"
+              name="email"
+              placeholder="Email"
+              required
+              ngModel
+            />
+          </div>
+          <div class="form-group">  
+            <input
+              type="password"
+              class="inqury_ipput"
+              name="password"
+              id="password"
+              placeholder="Password"
+              required
+              ngModel
+            />
+          </div>
+          <div class="form-group">  
+            <input
+              type="password"
+              class="inqury_ipput"
+              name="cpassword"
+              id="cpassword"
+              placeholder="Confirm Password"
+              required
+              ngModel
+            />
+          </div>
+          <div class="form-group">  
+            <input 
+              type="hidden" 
+              name="reference" 
+            />
+            <input
+              type="submit"
+              class="signin_btn"
+              name="register"
+              value="Register"
+            />
+            <input 
+              type="reset" 
+              class="signin_btn" 
+              value="Reset" 
+            />
+          </div>  
+        </form>
+      </div>
+    </div>
+  </div>
+</div>
+
+<div class="clearz"></div>

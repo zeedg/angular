@@ -1,0 +1,153 @@
+<!-- <swiper [config]="configFirst">
+  <div class="swiper-wrapper">
+    <div class="swiper-slide"  *ngFor="let slider of sliders; let i = index">
+      <img [src]="'../../assets/images/slider/'+slider.slider_image" width="100%" />
+    </div>
+  </div>
+  <div class="swiper-pagination"></div>
+  <div class="swiper-button-next"></div>
+  <div class="swiper-button-prev"></div>
+</swiper> -->
+
+<carousel>
+  <slide   *ngFor="let slider of sliders; let i = index">
+    <img [src]="'../../assets/images/slider/'+slider.slider_image" style="display: block; width: 100%;">
+  </slide>
+</carousel>  
+ <!-- <owl-carousel  -->
+     <!-- [options]="{items: 3, dots: false, navigation: false; autoplay:true}" -->
+     <!-- [items]="sliders" -->
+     <!-- [carouselClasses]="['owl-theme', 'row', 'sliding']"> -->
+     <!-- <div class="item" *ngFor="let slider of sliders; let i = index"> -->
+         <!-- <img [src]="'../../assets/images/slider/'+slider.slider_image" style="display:block; width:100%"> -->
+         <!-- <div class="thumbnail-image" [ngStyle]="{'background': 'url(../../assets/images/slider/three.jpg)no-repeat scroll center center / 80px 80px'}"></div> -->
+     <!-- </div> -->
+ <!-- </owl-carousel> -->
+
+
+  <!-- <carousel>
+    <slide *ngFor="let slider of sliders; let i=index">
+      <img [src]="'../../assets/images/slider/'+slider.slider_image" style="display: block; width: 100%;">
+    </slide>
+  </carousel> -->
+  <!-- Wrapper for slides -->
+
+<!-- Page container -->
+<div class="container">
+  <div class="row main-contant">
+    <div class="container contant-con">
+      <div class="col-lg-9">
+        <div class="col-lg-12">
+          <div class="product-row">
+            <div class="sect" id="flat-theme">
+              <div class="container" style="width: 100%;">
+                <div class="row">
+                  <div class="col-sm-12">
+                    <div class="">
+                      <div class="moduletable">
+                        <div id="offlajn-universal-product-slider-90-1-container" class=" loading">
+                          <div class="off_uni_slider_header">
+                            <div class="title">Featured Products</div>
+                          </div>
+                          <swiper [config]="configFeature">                            
+                            <div class="swiper-wrapper">                 
+                              <div class="swiper-slide"  *ngFor="let featureProduct of featureProducts; let i = index">
+                                <div class="img_container">
+                                  <!-- <a style="height: 170px; line-height: 170px;"> -->
+                                  <a [routerLink]="['/product-details']">
+                                    <!-- <img class="off-uni-slider-img" [src]="'../../assets/images/product/'+ newProduct.product_image"/> -->
+                                    <img [src]="'../../assets/images/product/'+featureProduct.product_image">
+                                  </a>
+                                  <span>${{featureProduct.product_price}}</span>                            
+                                </div>
+                                <span class="item_name"><a>{{featureProduct.product_title}}</a></span>
+                                <form [id]="'form3_'+featureProduct.product_id"  method="post" style="float: left;">
+                                  <input type="hidden" name="qty_cart" [id]="'qty_cart'+featureProduct.product_id" value="1" class="qty" />
+                                  <input type="hidden" name="product_id" [value]="featureProduct.product_id" />
+                                  <input type="hidden" name="cquantity" [id]="'cquantity'+featureProduct.product_id" value="1" />
+                                  <input type="hidden" name="unit_id" [id]="'unit_id'+featureProduct.product_id" [value]="featureProduct.product_id" />
+                                </form>
+                                <button class="addtocart"  ></button>
+                              
+                              </div>
+                            </div>
+                            <!-- Add Pagination -->
+                            <div class="swiper-pagination"></div>
+                            <!-- Add Arrows -->
+                            <div class="swiper-button-next"></div>
+                            <div class="swiper-button-prev"></div>
+                          </swiper>
+                        </div>
+                        <!-- <div id="offlajn-universal-product-slider-900-1-container" class=" loading"> -->
+                        <div id="offlajn-universal-product-slider-90-1-container" class=" loading">
+                          <div class="off_uni_slider_header">
+                            <div class="title">New Products</div>
+                          </div> 
+                          <swiper [config]="configFeature">
+                            <div class="swiper-wrapper">                 
+                              <div class="swiper-slide"  *ngFor="let newProduct of newProducts; let i = index">
+                                <div class="img_container">
+                                  <!-- <a style="height: 170px; line-height: 170px;"> -->
+                                  <a [routerLink]="['/product-details']">
+                                    <!-- <img class="off-uni-slider-img" [src]="'../../assets/images/product/'+ newProduct.product_image"/> -->
+                                    <img [src]="'../../assets/images/product/'+newProduct.product_image">
+                                  </a>
+                                  <span>${{newProduct.product_price}}</span>                            
+                                </div>
+                                <span class="item_name"><a>{{newProduct.product_title}}</a></span>
+                                <form [id]="'form3_'+newProduct.product_id"  method="post" style="float: left;">
+                                  <input type="hidden" name="qty_cart" [id]="'qty_cart'+newProduct.product_id" value="1" class="qty" />
+                                  <input type="hidden" name="product_id" [value]="newProduct.product_id" />
+                                  <input type="hidden" name="cquantity" [id]="'cquantity'+newProduct.product_id" value="1" />
+                                  <input type="hidden" name="unit_id" [id]="'unit_id'+newProduct.product_id" [value]="newProduct.product_id" />
+                                </form>
+                                <button class="addtocart"  ></button>
+                              
+                              </div>
+                            </div>
+                            <!-- Add Pagination -->
+                            <div class="swiper-pagination"></div>
+                            <!-- Add Arrows -->
+                            <div class="swiper-button-next"></div>
+                            <div class="swiper-button-prev"></div>
+                          </swiper>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="col-lg-3">
+        <div class="col-lg-12 catalog">
+          <div class="heading">View Catalog</div>
+          <div class="probox"> <a onclick="virtual_catalog();" target="_blank"><img src="../../assets/images/ms_28.png" class="img-responsive pdpic"/></a>
+            <div class="clickview"> <a>Click to View Pdf</a></div>
+          </div>
+        </div>
+        <div class="col-lg-12 testimonials">
+          <div class="heading mt20">Testimonials</div>
+
+
+
+          <div class="probox" style="height: 330px;">
+            <div id="slideshow_advance" style="width: 100%;">
+              <div class="testimonials">North Park University in Chicago has been purchasing equipment and supplies from Medical Shipment for several years. Both the Nursing Learning Resourc...<br />
+                <span>Jennifer Bulinski </span> <br />
+                Simulation Coordinator and Tec <br />
+                3305 W. Foster Avenue
+                Box 65
+                Chicago, IL 60625 <br />
+              </div>
+
+            </div>
+            <div class="clickview"> <a>View all</a></div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>

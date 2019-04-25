@@ -1,0 +1,32 @@
+/* .next {
+    margin-top: 0px;
+}
+.item{ margin:0 !important; padding:0 !important; }
+#demo1
+{
+    width: 144px;
+    height: 35px;
+    margin-top: -70px;
+    position: absolute;
+    margin-left: 350px;
+    border-radius: 15px;
+}
+#demo2
+{
+    width: 144px;
+    height: 34px;
+    margin-top: -70px;
+    position: absolute;
+    margin-left: 537px;
+    border-radius: 15px;
+} */
+
+swiper{
+    height: 250px;
+    width: 80%;
+    margin: auto;
+}
+ 
+.swiper-slide img{
+    width: 100%;
+}

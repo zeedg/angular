@@ -1,0 +1,193 @@
+<div class="container">
+  <div class="row main-contant">
+    <div class="container contant-con">
+      <div class="col-lg-12">
+        <div class="bodyinner">
+          <h1 class="h1">Request Catalog</h1>
+          <form name="dealerInquiry" id="myform" action="index.php?controller=catalog&function=thanks" method="post"
+            onsubmit="return submitUserForm();">
+            <input type="hidden" name="catalogform" value="1">
+            <table width="100%" border="0" cellpadding="0" cellspacing="10px" style="border-spacing:10px;">
+              <tbody>
+                <tr>
+                  <td style="float:left; margin-top: 5px;" width="135" scope="col"><img
+                      src="../../assets/images/digital_catalog.gif"><br>
+                    <br>
+                    <img src="../../assets/images/catalog_home.png"><br>
+                    <br>
+                    <div style="width:400px; text-align:left !important;"><span class="mainlink">
+                        <font face="Verdana, Arial, Helvetica, sans-serif">We now offer an Interactive, Digital version
+                          of our catalog that you can view online.</font>
+                      </span></div>
+                    <br>
+                    <a style="float:left; cursor: pointer;" onclick="virtual_catalog();" target="_blank"
+                      href="http://localhost/med/catalog/2016/catalog.html"><img src="../../assets/images/view_digital_catalog.gif"
+                        id="catalog_img" align="left" border="0"></a> &nbsp;
+                  </td>
+                  <td width="346" scope="col" align="left" valign="top" style="text-align:left !important;"
+                    class="dealer"></td>
+                </tr>
+                <tr>
+                  <td align="left"><img src="../../assets/images/freecatalog.png" align="left" border="0"><br></td>
+                  <td class="dealer" style="text-align:left !important;">&nbsp;</td>
+                </tr>
+                <tr>
+                  <td style="margin-left:-89px;" width="584"><input type="text" name="fname" id="fname" maxlength="128"
+                      class="inqury_ipput validate[required]" data-errormessage-value-missing="What's your first name"
+                      value="" placeholder="First Name"></td>
+                </tr>
+                <tr>
+                  <td style="margin-left:-89px;" width="584"><input type="text" name="lname" id="lname" maxlength="128"
+                      class="inqury_ipput validate[required]" data-errormessage-value-missing="What's your last name"
+                      value="" placeholder="Last Name"></td>
+                </tr>
+                <tr>
+                  <td style="margin-left:-89px;" width="584"><input type="text" name="company" id="company"
+                      maxlength="128" class="inqury_ipput validate[required]"
+                      data-errormessage-value-missing="What's your school/company" value=""
+                      placeholder="School or Company"></td>
+                </tr>
+                <tr>
+                  <td style="margin-left:-89px;" width="584"><input type="text" name="title" id="title1" maxlength="128"
+                      class="inqury_ipput validate[required]" data-errormessage-value-missing="What's your title"
+                      value="" placeholder="Title"></td>
+                </tr>
+                <tr>
+                  <td style="margin-left:-89px;" width="584">
+
+                    <input type="text" name="address" id="address" class="inqury_ipput validate[required]"
+                      spellcheck="false" data-errormessage-value-missing="What's your address" placeholder="Address"
+                      style="border: 1px solid rgb(139, 3, 0);">
+
+
+                  </td>
+                </tr>
+                <tr>
+                  <td style="margin-left:-89px;" width="584"><input type="text" name="zip" id="zip" maxlength="128"
+                      class="inqury_ipput validate[required]" data-errormessage-value-missing="What is your zipcode"
+                      placeholder="Zip Code" value=""></td>
+                </tr>
+                <tr>
+                  <td style="margin-left:-89px;" width="584"><input type="text" name="city" id="city" maxlength="128"
+                      class="inqury_ipput validate[required]" data-errormessage-value-missing="What is your city"
+                      placeholder="City" value=""></td>
+                </tr>
+                <tr>
+                  <td style="margin-left:-89px;" class="select_bgs">
+                    <select name="state_id" id="states" class="inqury_ipput drop validate[required]"
+                      data-errormessage-value-missing="Your state please">
+                      <option value="">Choose State</option>
+                      <option value=AL_US>Alabama</option>
+                      <option value=AK_US>Alaska</option>
+                      <option value=AZ_US>Arizona</option>
+                      <option value=AR_US>Arkansas</option>
+                      <option value=CA_US>California</option>
+                      <option value=CO_US>Colorado</option>
+                      <option value=CT_US>Connecticut</option>
+                      <option value=DE_US>Delaware</option>
+                      <option value=DC_US>District of Columbia</option>
+                      <option value=FL_US>Florida</option>
+                      <option value=GA_US>Georgia</option>
+                      <option value=HI_US>Hawaii</option>
+                      <option value=ID_US>Idaho</option>
+                      <option value=IL_US>Illinois</option>
+                      <option value=IN_US>Indiana</option>
+                      <option value=IA_US>Iowa</option>
+                      <option value=KS_US>Kansas</option>
+                      <option value=KY_US>Kentucky</option>
+                      <option value=LA_US>Louisiana</option>
+                      <option value=ME_US>Maine</option>
+                      <option value=MD_US>Maryland</option>
+                      <option value=MA_US>Massachusetts</option>
+                      <option value=MI_US>Michigan</option>
+                      <option value=MN_US>Minnesota</option>
+                      <option value=MS_US>Mississippi</option>
+                      <option value=MO_US>Missouri</option>
+                      <option value=MT_US>Montana</option>
+                      <option value=NE_US>Nebraska</option>
+                      <option value=NV_US>Nevada</option>
+                      <option value=NH_US>New Hampshire</option>
+                      <option value=NJ_US>New Jersey</option>
+                      <option value=NM_US>New Mexico</option>
+                      <option value=NY_US>New York</option>
+                      <option value=NC_US>North Carolina</option>
+                      <option value=ND_US>North Dakota</option>
+                      <option value=OH_US>Ohio</option>
+                      <option value=OK_US>Oklahoma</option>
+                      <option value=OR_US>Oregon</option>
+                      <option value=PA_US>Pennsylvania</option>
+                      <option value=RI_US>Rhode Island</option>
+                      <option value=SC_US>South Carolina</option>
+                      <option value=SD_US>South Dakota</option>
+                      <option value=TN_US>Tennessee</option>
+                      <option value=TX_US>Texas</option>
+                      <option value=UT_US>Utah</option>
+                      <option value=VT_US>Vermont</option>
+                      <option value=VA_US>Virginia</option>
+                      <option value=WA_US>Washington</option>
+                      <option value=WV_US>West Virginia</option>
+                      <option value=WI_US>Wisconsin</option>
+                      <option value=WY_US>Wyoming</option>
+                    </select></td>
+                </tr>
+                <tr>
+                  <td>&nbsp;</td>
+                </tr>
+                <tr>
+                  <td style="margin-left:-89px;" width="584"><input type="text" name="phone" id="phone" maxlength="128"
+                      class="inqury_ipput validate[required]" data-errormessage-value-missing="Your phone number?"
+                      value="" placeholder="Contact Phone Number"></td>
+                </tr>
+                <tr>
+                  <td style="margin-left:-89px;" width="584"><input type="email" name="email" id="email" maxlength="128"
+                      class="inqury_ipput validate[required]" data-errormessage-value-missing="What's your email"
+                      value="" placeholder="Email"></td>
+                </tr>
+                <tr>
+                  <td style="margin-left:-89px;" class="select_bgs"><select id="state_id3"
+                      class="inqury_ipput drop validate[required]" data-errormessage-value-missing="Select one option"
+                      name="hear_about">
+                      <option value="">Hear about us ?</option>
+                      <option value="Trade Show">Trade Show</option>
+                      <option value="Internet Search Engine">Internet Search Engine</option>
+                      <option value="Word of Mouth/Referral">Word of Mouth/Referral</option>
+                      <option value="Other">Other</option>
+                    </select></td>
+                </tr>
+                <tr>
+                  <td colspan="2">
+                    <table width="100%" id="why_not" style="display:none;" align="center">
+                      <tbody>
+                        <tr>
+                          <td style="margin-left:-89px;" width="584"><input type="text" name="other" id="other"
+                              maxlength="128" class="inqury_ipput validate[required]" value="Other"
+                              onkeydown="if(this.value=='Other' &amp;&amp; event.keyCode!=16 &amp;&amp; event.keyCode!=17 &amp;&amp; event.keyCode!=18)  { this.value=''; change_thing('other');}"
+                              onblur="if(this.value==''){this.value='Other'}"
+                              onfocus="if(this.value=='Other'){resetCursor(other)}"
+                              onclick="if(this.value=='Other'){resetCursor(other)}" autocomplete="off"></td>
+                        </tr>
+                      </tbody>
+                    </table>
+                  </td>
+                </tr>
+                <tr>
+                  <td>
+                    <div id="g-recaptcha-error" style="margin-top:10px;"></div>
+                    <div class="g-recaptcha" data-sitekey="6Ld6WJUUAAAAAMxna7-BgaManNWta1SYl2pQYQzC"
+                      style="margin-top:10px;"></div>
+                  </td>
+                </tr>
+                <tr>
+                  <td style="margin-left:-249px;" width="584">
+                    <button type="submit" class="signin_btn" value="Submit">Submit</button></td>
+                </tr>
+              </tbody>
+            </table>
+          </form>
+
+        </div>
+        <p>&nbsp;<br /></p>
+      </div>
+    </div>
+  </div>
+</div>
