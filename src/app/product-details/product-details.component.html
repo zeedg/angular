@@ -10,18 +10,18 @@
             <a
               class="zoom img-responsive"> 
               <img
-                src="../../assets/images/product/97202282_5a74bc54b8141_193762791_1517599828.jpg"
+                [src]="'assets/images/product/' + productDetails[0].product_image"
                 alt="Dressing Change Tray, Sterile, 20/case" class="img-responsive"> </a> <br />
             <br />
             <h2 class="more_view">More Views</h2>
 
 
-            <a href="#"
-              onclick="popWin('../../assets/images/product/97202282_5a74bc54b8141_193762791_1517599828.jpg', 'gallery', 'width=5046,height=2159,left=0,top=0,location=no,scrollbars=no,resizable=no'); return false;"><img
+            <a
+              onclick="popWin('assets/images/product/97202282_5a74bc54b8141_193762791_1517599828.jpg', 'gallery', 'width=5046,height=2159,left=0,top=0,location=no,scrollbars=no,resizable=no'); return false;"><img
                 style="border:2px solid #ddd"
-                src="../../assets/images/product/97202282_5a74bc54b8141_193762791_1517599828.jpg"
-                width="100"></a>
-            <!--<a href="#" onclick="popWin('../../assets/images/product/97202282_5a74bc54b8141_193762791_1517599828.jpg', 'gallery', 'width=5046,height=2159,left=0,top=0,location=no,scrollbars=no,resizable=no'); return false;"><img style="border:2px solid #ddd" src="image.php?width=56&height=56&image=../../assets/images/product/97202282_5a74bc54b8141_193762791_1517599828.jpg"></a>-->
+                [src]="'assets/images/product/' + productDetails[0].product_image"
+                width="60"></a>
+            <!--<a href="#" onclick="popWin('assets/images/product/97202282_5a74bc54b8141_193762791_1517599828.jpg', 'gallery', 'width=5046,height=2159,left=0,top=0,location=no,scrollbars=no,resizable=no'); return false;"><img style="border:2px solid #ddd" src="image.php?width=56&height=56&image=assets/images/product/97202282_5a74bc54b8141_193762791_1517599828.jpg"></a>-->
           </div>
 
         </div>
@@ -29,24 +29,24 @@
         <div class="col-lg-6  col-md-6 col-sm-6 p-dec">
           <div class="row p-cont">
             <div class="headingc">
-              <h3 class="fi20"><a href="#">Dressing Change Tray, Sterile, 20/case</a></h3>
+              <h3 class="fi20"><a href="#">{{productDetails[0].product_title}}</a></h3>
             </div>
             <div class="cartpad">
               <p class="pr3">
-                $59.99</p>
+                ${{ productDetails[0].product_price}}</p>
               <hr>
               <div class="soc-img">
                 <p class="p-blue">Review </p>
                 <div class="row">
-                  <a target="_blank"><img src="../../assets/images/Product_07.jpg"></a>
+                  <a target="_blank"><img src="assets/images/Product_07.jpg"></a>
                   <a target="_blank"><img
-                      src="../../assets/images/Product_09.jpg"></a>
+                      src="assets/images/Product_09.jpg"></a>
                   <a target="_blank"><img
-                      src="../../assets/images/Product_11.jpg"></a>
+                      src="assets/images/Product_11.jpg"></a>
                   <a target="_blank"><img
-                      src="../../assets/images/Product_12.jpg"></a>
+                      src="assets/images/Product_12.jpg"></a>
                   <a target="_blank"><img
-                      src="../../assets/images/pinterest.png"></a>
+                      src="assets/images/pinterest.png"></a>
                 </div>
               </div>
               <div class="clearz"></div>
@@ -55,35 +55,45 @@
                 <span class="p-blue">
                   Item Number:
                 </span>
-                &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 8504css
+                &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; {{productDetails[0].product_item_no}}
               </p>
               <br />
 
               <div class="col-lg-12">
                 <div class="q-box">
-                  <!-- <p style="width: auto; float: left; line-height: 40px;"> -->
+                  <div style="width: auto; float: left; line-height: 40px;">
                     Qty:
-                    <form id="form3" method="post" style="float: left;">
-                      <input type="text" name="qty_cart" id="qty_cart" value="1" class="qty" />
-                      <input type="hidden" name="product_id" value="3151" />
-                      <input type="hidden" name="cquantity" id="cquantity" value="1" />
-                      <input type="hidden" name="unit_id" id="unit_id" value="7" />
+                    <form 
+                      id="form3" 
+                      method="post" 
+                      style="float: left;"
+                      #f="ngForm">
+                      <input 
+                        type="text" 
+                        name="qty_cart" 
+                        id="qty_cart"  
+                        class="qty" 
+                        [ngModel]="'1'" 
+                        #qty />
+                      <input type="hidden" name="product_id" id="poduct_id" [ngModel]="productDetails[0].product_id" />
+                      <input type="hidden" name="cquantity" id="cquantity" [ngModel]="'1'"  />
+                      <input type="hidden" name="unit_id" id="unit_id" [ngModel]="productDetails[0].unit_id" />
                     </form>
-                  <!-- </p> -->
+                  </div>
                 </div>
-                <div class="qty_chnange"><img src="../../assets/images/up.png" class="up" id="up_cart"> 
-                  <img src="../../assets/images/down.png"
+                <div class="qty_chnange" ><img [src]="'assets/images/up.png'" (click)="increaseCartQty()" class="up" id="up_cart"> 
+                  <img src="assets/images/down.png" (click)="decreaseCartQty()"
                     class="down" id="down_cart">
                   </div>
-                <a onclick="addCart()">
+                <a (click)="addToCart(f)">
                   <p class="add_cart"></p>
                 </a>
               </div>
 
               <div class="col-lg-12">
                 <div class="q-box">
-                  <!-- <p style="width: auto; float: left; line-height: 40px;"> Qty: -->
-                    <form id="form1" action="../../index.php?controller=quote&function=index"
+                  <div style="width: auto; float: left; line-height: 40px;"> Qty:
+                    <form id="form1" action="index.php?controller=quote&function=index"
                       method="post" style="float: left;">
                       <div class="priceleft2"></div>
                       <input type="text" name="quantity" id="qty_quote" value="1" class="qty" />
@@ -91,14 +101,14 @@
                       <input type="hidden" name="unit_id_q" id="unit_id_q" value="7" />
                     </form>
                     <form id="form2"
-                      action="../../index.php?controller=favorites&function=index"
+                      action="index.php?controller=favorites&function=index"
                       method="post">
                       <input type="hidden" name="product_id" value="3151" />
                       <input type="hidden" name="unit_id_f" id="unit_id_f" value="7" />
                     </form>
-                  <!-- </p>   -->
+                  </div>  
                 </div>
-                <div class="qty_chnange"><img src="../../assets/../../assets/images/up.png" class="up" id="up_quote"> <img src="images/down.png"
+                <div class="qty_chnange"><img src="assets/images/up.png" class="up" id="up_quote"> <img src="assets/images/down.png"
                     class="down" id="down_quote"></div>
                 <a onclick="document.getElementById('form1').submit();">
                   <p class="add_quote"></p>
@@ -121,35 +131,13 @@
         <div class="col-lg-3 col-md-3 col-sm-3 best_seller" id="best_seller" style="margin:0">
           <div class="heading1" style="line-height:46px">Best Seller</div>
           <div class="probox" style=" height:auto; min-height:396px;">
-            <div class="side-prod col-lg-12 ">
+            <div class="side-prod col-lg-12 " *ngFor="let bsp of bestSellingProducts">
               <div class="col-lg-4"><a> <img
-                    src="../../assets/images/product/240222525_5a74afa04fbba_794310838_1517596576.jpg"
+                    [src]="'assets/images/product/' + bsp.product_image"
                     class="img-responsive"></a></div>
               <div class="col-lg-8">
-                <p class="fi13"><a>Foley
-                    Catheter Kit, Latex...</a></p>
-                <p class="pr2">$9.99</p>
-              </div>
-            </div>
-            <div class="side-prod col-lg-12 ">
-              <div class="col-lg-4"><a> <img
-                    src="../../assets/images/product/263286428_5aaab87ce22aa_199451483_1521137788.jpg"
-                    class="img-responsive"></a></div>
-              <div class="col-lg-8">
-                <p class="fi13"><a>Dressing
-                    Change Tray, Ste...</a></p>
-                <p class="pr2">$2.99</p>
-              </div>
-            </div>
-            <div class="side-prod col-lg-12 probox-last">
-              <div class="col-lg-4"><a
-                  href="../../index.php?controller=product&function=index&id=2177"> <img
-                    src="../../assets/images/product/image_2544.jpg" class="img-responsive"></a></div>
-              <div class="col-lg-8">
-                <p class="fi13"><a
-                    href="../../index.php?controller=product&function=index&id=2177">Swabsticks,
-                    Dry, Non-Ster...</a></p>
-                <p class="pr2">$1.94</p>
+                <p class="fi13"><a>{{bsp.product_title}}</a></p>
+                <p class="pr2">${{bsp.product_price}}</p>
               </div>
             </div>
           </div>
@@ -177,17 +165,7 @@
     <div id="myTabContent" class="tab-content">
 
       <div class="tab-pane fade in active" id="description">
-        <p>Contents:<br />
-          (1) Tray with TYVEK Lid<br />
-          (1) Polylined Sterile Field Drape<br />
-          (1) Polybag w/ Twist Tie<br />
-          (4) 4&quot; x 4&quot; Gauze Dressings<br />
-          (1) 1&quot; x 36&quot; Plastic Tape<br />
-          (1) Transfer Forcep<br />
-          (1) 5&quot; x 9&quot; Abdominal Pad<br />
-          (1) 2&quot; Safety Pin<br />
-          (1) PVP Iodophor Swabsticks (3 ea)</p><br />
-        <br />
+        {{productDetails[0].product_detail}}
       </div>
       <div class="tab-pane fade" id="info">
         <table style="width:39.3%; background:#fff; margin-top:5px; float:left;">
@@ -195,33 +173,33 @@
             <tr>
               <td class="aitd" style="color:#000 !important; border:1px solid #CCC; font-weight:bold; width:270px;">Item
                 Number</td>
-              <td class="aitd" style="border:1px solid #CCC;">8504css</td>
+              <td class="aitd" style="border:1px solid #CCC;">{{productDetails[0].product_item_no}}</td>
             </tr>
             <tr style="background:#fff;">
               <td class="aitd" style="color:#000 !important; border:1px solid #CCC; font-weight:bold; width:270px;">
                 Length</td>
-              <td style="border:1px solid #CCC;" class="aitd">23 in</td>
+              <td style="border:1px solid #CCC;" class="aitd">{{productDetails[0].product_length}} in</td>
             </tr>
             <tr style="background:#fff;">
               <td class="aitd" style="color:#000 !important; border:1px solid #CCC; font-weight:bold; width:270px;">
                 Width</td>
-              <td style="border:1px solid #CCC;" class="aitd">11 in</td>
+              <td style="border:1px solid #CCC;" class="aitd">{{productDetails[0].product_width}} in</td>
             </tr>
             <tr style="background:#fff;">
               <td class="aitd" style="color:#000 !important; border:1px solid #CCC; font-weight:bold; width:270px;">
                 Height</td>
-              <td style="border:1px solid #CCC;" class="aitd">8 in</td>
+              <td style="border:1px solid #CCC;" class="aitd">{{productDetails[0].product_height}} in</td>
             </tr>
             <tr style="background:#fff;">
               <td class="aitd" style="color:#000 !important; border:1px solid #CCC; font-weight:bold; width:270px;">
                 Dimensions (inches) (LxWxH) </td>
-              <td style="border:1px solid #CCC;" class="aitd">23x11x8</td>
+              <td style="border:1px solid #CCC;" class="aitd">{{productDetails[0].product_length }} x {{ productDetails[0].product_width }} x {{ productDetails[0].product_height}}</td>
             </tr>
             <tr style="background:#fff;">
               <td class="aitd" style="color:#000 !important; border:1px solid #CCC; font-weight:bold; width:270px;">
                 Product Weight </td>
               <td style="border:1px solid #CCC;" class="aitd">
-                4 lbs</td>
+                {{productDetails[0].product_weight}} lbs</td>
             </tr>
             <tr style="background:#fff;">
               <td class="aitd" colspan="2">&nbsp;</td>
@@ -236,38 +214,55 @@
         <h2>Literature here</h2>
       </div>
 
-      <div class="tab-pane fade" id="reviews"> <br />
+      <div class="tab-pane fade" id="reviews" *ngFor="let review of reviews"> <br />
+        <ng-container *ngFor="let review of reviews">
+          <div class='rew'>
+            <span class='star'>{{ getStars(review['rew_rating']) }}</span>
+            <span class='name'>
+              <b class='bold'>{{ review['user_fname'] + ' ' + review['user_lname'] }}</b>
+            </span>  
+            <span class='date'>
+              {{ review['date'] }}
+            </span>
+            <div style='clear:both'></div>
+            <p>{{ review['rew_comment'] }}</p>
+          </div>  
+        </ng-container>  
         <h1 class="h1">Write Review</h1>
-        <form action="../../index.php?controller=product&function=review" method="post">
+        <form method="post">
           <input type="hidden" name="product_id" value="3151" />
           <table class="tbl">
             <tr>
               <td><label>Rating <b>*</b></label>
                 <p>
                   <input name="rating" value="5" type="radio" required />
-                  &nbsp;&nbsp;&nbsp; <img src="../../assets/images/star.png" /> <img
-                    src="../../assets/images/star.png" /> <img
-                    src="../../assets/images/star.png" /> <img
-                    src="../../assets/images/star.png" /> <img
-                    src="../../assets/images/star.png" /> </p>
+                  &nbsp;&nbsp;&nbsp; <img src="assets/images/star.png" /> 
+                  <img
+                    src="assets/images/star.png" /> 
+                  <img
+                    src="assets/images/star.png" /> 
+                  <img
+                    src="assets/images/star.png" /> 
+                    <img
+                    src="assets/images/star.png" /> </p>
                 <p>
                   <input name="rating" value="4" type="radio" required />
-                  &nbsp;&nbsp;&nbsp; <img src="../../assets/images/star.png" /> <img
-                    src="../../assets/images/star.png" /> <img
-                    src="../../assets/images/star.png" /> <img
-                    src="../../assets/images/star.png" /> </p>
+                  &nbsp;&nbsp;&nbsp; <img src="assets/images/star.png" /> <img
+                    src="assets/images/star.png" /> <img
+                    src="assets/images/star.png" /> <img
+                    src="assets/images/star.png" /> </p>
                 <!-- <p> -->
                   <p>
                     <input name="rating" value="3" type="radio" required />
-                    &nbsp;&nbsp;&nbsp; <img src="../../assets/images/star.png" /> <img
-                      src="../../assets/images/star.png" /> <img
-                      src="../../assets/images/star.png" /> </p>
+                    &nbsp;&nbsp;&nbsp; <img src="assets/images/star.png" /> <img
+                      src="assets/images/star.png" /> <img
+                      src="assets/images/star.png" /> </p>
                   <p>
                     <input name="rating" value="2" type="radio" required />
-                    &nbsp;&nbsp;&nbsp; <img src="../../assets/images/star.png" /> <img
-                      src="../../assets/images/star.png" /> </p>
+                    &nbsp;&nbsp;&nbsp; <img src="assets/images/star.png" /> <img
+                      src="assets/images/star.png" /> </p>
                   <input name="rating" value="1" type="radio" required />
-                  &nbsp;&nbsp;&nbsp;<img src="../../assets/images/star.png" />
+                  &nbsp;&nbsp;&nbsp;<img src="assets/images/star.png" />
                 <!-- </p> -->
               </td>
             </tr>
@@ -300,7 +295,7 @@
     <div class="side-prod col-lg-12 ">
 
       <div class="col-lg-4"><a> <img
-            src="../../assets/images/product/240222525_5a74afa04fbba_794310838_1517596576.jpg"
+            src="assets/images/product/240222525_5a74afa04fbba_794310838_1517596576.jpg"
             class="img-responsive"></a></div>
 
       <div class="col-lg-8">
@@ -309,44 +304,6 @@
             Kit, Latex...</a></p>
 
         <p class="pr2">$9.99</p>
-
-      </div>
-
-    </div>
-
-
-    <div class="side-prod col-lg-12 ">
-
-      <div class="col-lg-4"><a> <img
-            src="../../assets/images/product/263286428_5aaab87ce22aa_199451483_1521137788.jpg"
-            class="img-responsive"></a></div>
-
-      <div class="col-lg-8">
-
-        <p class="fi13"><a>Dressing Change
-            Tray, Ste...</a></p>
-
-        <p class="pr2">$2.99</p>
-
-      </div>
-
-    </div>
-
-
-    <div class="side-prod col-lg-12 probox-last">
-
-
-      <div class="col-lg-4"><a> <img
-            src="../../assets/images/product/image_2544.jpg"
-            class="img-responsive"></a></div>
-
-      <div class="col-lg-8">
-
-        <p class="fi13"><a
-           >Swabsticks, Dry,
-            Non-Ster...</a></p>
-
-        <p class="pr2">$1.94</p>
 
       </div>
 
@@ -367,7 +324,7 @@
       <div class="modal-body">
 
 
-        <form action="../../index.php?controller=favorites&function=index" method="post"
+        <form action="index.php?controller=favorites&function=index" method="post"
           id="form_whish_0">
           <table id="g-manage-table-wishlist1" class="a-keyvalue a-spacing-mini" style="width: 100%;">
             <tbody>

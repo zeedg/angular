@@ -8,6 +8,7 @@ import { NgModule } from '@angular/core';
 // third party imports
 import { SwiperModule } from 'angular2-useful-swiper';
 import { CarouselModule } from 'ngx-bootstrap/carousel';
+import { CookieService } from 'ngx-cookie-service';
 
 import { AppComponent } from './app.component';
 import { FooterComponent } from './footer/footer.component';
@@ -28,6 +29,12 @@ import { TermsConditionsComponent } from './terms-conditions/terms-conditions.co
 import { PrivacyPolicyComponent } from './privacy-policy/privacy-policy.component';
 import { ContactComponent } from './contact/contact.component';
 import { ProductDetailsComponent } from './product-details/product-details.component';
+import { ProductListingComponent } from './product-listing/product-listing.component';
+import { ShopingCartComponent } from './shoping-cart/shoping-cart.component';
+import { SignoutComponent } from './auth/signout/signout.component';
+import { ShopingCartService } from './services/shoping-cart.service';
+import { ShipingPaymentComponent } from './shiping-payment/shiping-payment.component';
+import { PaymentComponent } from './payment/payment.component';
 
 @NgModule({
   declarations: [
@@ -48,7 +55,12 @@ import { ProductDetailsComponent } from './product-details/product-details.compo
     TermsConditionsComponent,
     PrivacyPolicyComponent,
     ContactComponent,
-    ProductDetailsComponent
+    ProductDetailsComponent,
+    ProductListingComponent,
+    ShopingCartComponent,
+    SignoutComponent,
+    ShipingPaymentComponent,
+    PaymentComponent
   ],
   imports: [
 
@@ -59,7 +71,12 @@ import { ProductDetailsComponent } from './product-details/product-details.compo
     SwiperModule,
     CarouselModule.forRoot()
   ],
-  providers: [DataStorageService, AuthService],
+  providers: [
+    DataStorageService, 
+    AuthService,
+    ShopingCartService,
+    CookieService
+  ],
   bootstrap: [AppComponent]
 })
 export class AppModule {}

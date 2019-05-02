@@ -3602,7 +3602,7 @@ background:#f4f4f4;
 	border-color: #e7e7e7
 }
 .navbar-default .navbar-nav>.open>a, .navbar-default .navbar-nav>.open>a:hover, .navbar-default .navbar-nav>.open>a:focus {
-	color: #002d62
+	color: #002d62;
 	background-color: #ccb776
 }
 @media (max-width:767px) {
@@ -4271,7 +4271,7 @@ a.list-group-item:hover, a.list-group-item:focus {
 	border-color: #f3f3f3;
 	color: #000;
 	font-size: 16px;
-	font-family::"RobotoBlod";
+	font-family:"RobotoBlod";
 	z-index: 2
 }
 .list-group-item.active .list-group-item-heading, .list-group-item.active:hover .list-group-item-heading, .list-group-item.active:focus .list-group-item-heading, .list-group-item.active .list-group-item-heading>small, .list-group-item.active:hover .list-group-item-heading>small, .list-group-item.active:focus .list-group-item-heading>small, .list-group-item.active .list-group-item-heading>.small, .list-group-item.active:hover .list-group-item-heading>.small, .list-group-item.active:focus .list-group-item-heading>.small {
@@ -5181,7 +5181,6 @@ filter:progid:DXImageTransform.Microsoft.gradient(startColorstr='#00000000', end
 	line-height:37px;
     z-index: 10
 }
-}
 .carousel-caption .btn {
 	text-shadow: none
 }
@@ -5747,7 +5746,7 @@ color:# 007177;
 
 .drp_sub_menu{
     /*background: url("bullet.png") no-repeat 12px 19px !important;*/
-    background-image: url("bullet.png");
+    background-image: url(../../assets/images/bullet.png);
 }
 .drp_sub_menu-bl{
     border:1px solid #999 !important;
@@ -5755,4 +5754,3 @@ color:# 007177;
 }
 
 
-----------------------------------------------

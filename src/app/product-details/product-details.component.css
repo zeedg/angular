@@ -179,3 +179,7 @@ input, button, select, textarea {
 	width: 100% !important;
 }
 }
+
+.p-img, .p-dec{
+	margin: 0;
+}

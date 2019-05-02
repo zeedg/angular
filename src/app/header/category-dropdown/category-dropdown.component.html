@@ -8,7 +8,10 @@
           <ul class="sub">
             <li  *ngFor="let subCat of category.sub_cats">
               <ng-container *ngIf="subCat">                         
-                <a>{{subCat.category_title}}</a>
+                <a 
+                  class="cp"
+                  [routerLink]="['/product-listing',subCat.category_id]"
+                  >{{subCat.category_title}}</a>
               </ng-container>
             </li>
           </ul>

@@ -1,0 +1,72 @@
+strong span {
+	text-decoration: underline;
+	color: #009900;
+}
+.subtotal {
+	text-align: left;
+}
+/*.special_text {
+    width: 16px;
+    height: 16px;
+    border-radius: 50px;
+    font-size: 15px;
+    font-weight: bold;
+    color: #fff;
+    line-height: 16px;
+    text-align: center;
+    background: #F00;
+    font-family: Serif;
+}*/
+.special_text {
+	color: #F00;
+	text-decoration: line-through;
+}
+.special_text {
+/*width:18px;
+    height:18px;
+    border-radius:9px;
+    font-size:15px;
+	font-weight:bold;
+    color:#fff;
+    line-height:18px;
+    text-align:center;
+    background:#F00;
+	font-family:Serif;
+	float:left;
+	margin-right:2px;*/
+}
+.qnty {
+/*font-weight:bold;
+	color:salmon;*/
+}
+.product {
+/*font-weight:bold;
+	text-decoration:underline;*/
+}
+.price {
+/*color:salmon;
+	font-weight:bold;*/
+}
+.group {
+/*font-size:18px;
+	color:seagreen;*/
+}
+.odd a:hover {
+	text-decoration: underline;
+	cursor: pointer;
+}
+.btncart
+{
+	margin-left: 0px;
+	width: 210px;
+}
+/* All Mobile Sizes (devices and browser) */
+@media only screen and (min-width: 320px) and (max-width: 480px) 
+{
+ .first a img { height: 100px; }	
+}
+.a-right {
+
+    text-align: left !important;
+
+}

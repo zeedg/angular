@@ -1,14 +1,13 @@
-import { Component, OnInit, AfterViewInit, ElementRef } from '@angular/core';
+import { Component, OnInit, ElementRef } from '@angular/core';
 import { DataStorageService } from './../services/data-storage.service';
-import $ from "../../assets/js/jquery";
-import * as jQuery from "../../assets/js/jquery";
+import { Router } from '@angular/router';
 
 @Component({
   selector: "app-home",
   templateUrl: "./home.component.html",
   styleUrls: ["./home.component.css"]
 })
-export class HomeComponent implements OnInit, AfterViewInit {
+export class HomeComponent implements OnInit {
 
   sliders = [];
   featureProducts = [];
@@ -16,7 +15,10 @@ export class HomeComponent implements OnInit, AfterViewInit {
   configFeature: SwiperOptions;
 
 
-  constructor(private dsService: DataStorageService, private el: ElementRef) {}
+  constructor(
+    private dsService: DataStorageService, 
+    private el: ElementRef,
+    private router: Router) {}
 
   ngOnInit() {
 
@@ -32,7 +34,7 @@ export class HomeComponent implements OnInit, AfterViewInit {
       };     
   
     this.dsService.getHomeData().subscribe((data: any) => {
-      console.log(data);
+      // console.log(data);
       // data.featured.forEach(function(fp) {
       //   console.log(fp.product_image);
       // });
@@ -56,9 +58,10 @@ export class HomeComponent implements OnInit, AfterViewInit {
 
   }// end of ngOnInit
 
-  ngAfterViewInit(){
-
-  }// end of after
+  // onProductDetails(productId){
+  //   this.dsService.getProductDetails(productId);
+  //   this.router.navigate(['/product-details']);
+  // }
 
 
 }// end of class

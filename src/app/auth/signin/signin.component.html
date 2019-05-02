@@ -4,6 +4,9 @@
       <div class="col-lg-12">
         <div class="bodyinner">
           <h1 class="h1">Customer Account LogIn</h1>
+          <div class="text-center" *ngIf="loginErr">
+            <h4 class="alert-danger text-center">{{ statusMessage }}</h4>
+          </div>
           <form (ngSubmit)="onSignin(f)" #f="ngForm">
             <div class="col-lg-6" id="login_tbl">
               <table class="tbl">
@@ -57,7 +60,8 @@
                     <label
                       >Forgot your Password?
                       <a
-                        href="https://www.medicalshipment.com/index.php?controller=login&function=forget"
+                        class="cp"
+                        [routerLink]="['/signup']"
                         >Click Here</a
                       ></label
                     >

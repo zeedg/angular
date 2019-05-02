@@ -46,8 +46,9 @@ export class CategoryDropdownComponent implements OnInit {
       });
       // this.categories = mainArr;
       this.categories = mainCats;
-      console.log(mainCats);
+      // console.log(mainCats);
     });
-  }
-}
+
+  }// end of ngOnInit
+}// end of class
 

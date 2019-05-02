@@ -1,0 +1,71 @@
+.prodtxt {
+	background-color: #d5dbe2;
+	padding: 5px;
+	border-radius: 4px
+}
+.bodycontent h1 {
+	width: auto
+}
+.proright {
+	width: 60%
+}
+.proimage {
+	border-radius: 0;
+	border: 0 none;
+	background-color: #FFF;
+	float: left;
+	padding-right: 2%;
+}
+.proimage img {
+	border-radius: 4px;
+}
+#links {
+	color: #FFF;
+	text-decoration: underline !important;
+}
+.col-lg-3 {
+	margin-right: 0;
+}
+#from_price:hover, #to_price:hover, #price05:hover, #price510:hover, #price1020:hover, #price20100:hover, #price100:hover, #s:hover, #m:hover, #l:hover, #xl:hover, #cotton:hover, #Metal:hover, #Latex:hover, #sprice:hover, #nprice:hover {
+	border: 1px solid #007dc6;
+}
+#top_from_price:hover, #top_to_price:hover, #best_seller:hover, #low_to_high:hover, #high_to_low:hover, .manufacture:hover {
+	border: 1px solid #007dc6 !important;
+}
+input[type=checkbox]:checked, .prinput input[type="checkbox"]:checked {
+	background: url(../../assets/images/check.png) no-repeat 3px 1px !important;
+	border: 1px solid #007dc6 !important;
+}
+
+.list-group {
+	padding-left: 0;
+	margin-bottom: 20px;
+	border: 0px solid #f3f3f3;
+	border-left:1px solid #f3f3f3;
+	border-radius: 5px;    
+	box-shadow: 3px 3px 3px rgba(0,0,0,.1);
+    border-top-right-radius: 5px;
+    border-bottom-right-radius: 5px;
+}
+.list-group-item {
+    background-color: #fff;
+    border-bottom: 1px solid #ddd;
+    border-top: 1px solid #ddd;
+    display: block;
+    margin-bottom: -1px;
+    padding: 10px 0px;
+	color:#484848;
+	font-size:14px;
+	font-family:"RobotoMedium";
+    position: relative
+}
+.list-group-item:first-child {
+/*	border-top-left-radius: 4px;
+	border-top-right-radius: 4px*/
+    padding-left: 10px;
+}
+.list-group-item:last-child {
+	margin-bottom: 0;
+	border-bottom-right-radius: 4px;
+	border-bottom-left-radius: 4px
+}

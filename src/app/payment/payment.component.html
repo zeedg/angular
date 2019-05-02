@@ -1,0 +1,443 @@
+<div class="container" id="checkout_body">
+  <div class="row main-contant">
+    <div class="container contant-con">
+      <div class="content">
+        <div class="bodyinner">
+        
+          <div class="steps"><img src="https://www.medicalshipment.com/images/cart_imags3.jpg"  /></div>
+          <h3><strong>Add a Payment Method</strong></h3>
+          <div class="clear:both"></div>
+            
+            <hr class="a-spacing-base" style="width: 100%;">
+            
+          <br />
+          <div class="col-lg-12">
+          <div class="col-lg-8 left_allportion">
+            <div class="left_bigportion">
+              <div style="float:left;border-bottom: 1px solid #CCC;padding-bottom: 10px;margin-bottom: 10px;" class="col-lg-12">
+                <div id="tour_div_7" class="introjs-showElement introjs-relativePosition"> 
+                <span class="step-header amz-stepped">1</span>
+                <strong style="font-size:13px;" class="col-lg-3">Shipping Address</strong>
+                <p id="loading_address"><img src="https://www.medicalshipment.com/images/loader.gif" /> Loading address information</p>
+                                    <div id="slide_address">              
+                  <span class="col-lg-6">Miranda Brown<br>
+                  550 17TH AVE SUITE 410<br>
+                  Seattle, Washington 98122<br>
+                                    </span>
+                  <p class="col-lg-3"><button class="amz_change" id="amzChangeAddress">Change</button></p>
+                  </div>
+                                  </div>
+              </div>
+              <div class="col-lg-12" id="tour_div_9"> <strong style="width: 27%;" class="col-lg-3 active_step">
+                <span class="step-header amz-stepped active_step">2</span>Payment Method</strong>
+                <p id="loading_payment"><img src="https://www.medicalshipment.com/images/loader.gif" /> Saving your payment method</p>
+                <div class="col-lg-12" id="selectpayment">
+                <p id="CardSuccess" style="color: green; font-size:14px;"></p>
+				          <!--<form action="https://www.medicalshipment.com/index.php?controller=cart&function=checkout" method="post" id="checkout_form">-->
+          
+          <div class="existing-payment-methods-wrapper" id="existing-payment-methods">
+          		<div id="credit_cards" width="70%">
+                	<div class="col-lg-12 cc_style">
+                	<div class="col-lg-5"><h3>Your credit and debit cards</h3></div>
+                    <div class="col-lg-3">Name on card</div>
+                    <div class="col-lg-2">Expires on</div>
+                    <div class="col-lg-1" style="float:right;">Edit</div>
+                    </div>
+                    
+                                        
+                                        <div class="col-lg-12 cc_style">
+                	
+                    <div class="col-lg-5"><input type="radio" name="cc_id" class="cc_radio" onclick="paymentmethodcc('p_method_ccpayment');" value="cc_49" required="required" />
+					VISA ending with 1111</div>
+                    <div class="col-lg-3">Mushtaq</div>
+                    <div class="col-lg-2">02/2020</div>
+                    <div class="col-lg-1" style="float:right;cursor: pointer;"><a onclick="showEditCard(49)">Edit</a></div>
+                    </div>
+                                        <div class="col-lg-12 cc_style">
+                	
+                    <div class="col-lg-5"><input type="radio" name="cc_id" class="cc_radio" onclick="paymentmethodcc('p_method_ccpayment');" value="cc_91" required="required" />
+					MasterCard ending with 5100</div>
+                    <div class="col-lg-3">Mushtaq</div>
+                    <div class="col-lg-2">10/2019</div>
+                    <div class="col-lg-1" style="float:right;cursor: pointer;"><a onclick="showEditCard(91)">Edit</a></div>
+                    </div>
+                                        <div class="col-lg-12 cc_style">
+                	
+                    <div class="col-lg-5"><input type="radio" name="cc_id" class="cc_radio" onclick="paymentmethodcc('p_method_ccpayment');" value="cc_103" required="required" />
+					VISA ending with 1881</div>
+                    <div class="col-lg-3">Mushtaq</div>
+                    <div class="col-lg-2">11/2023</div>
+                    <div class="col-lg-1" style="float:right;cursor: pointer;"><a onclick="showEditCard(103)">Edit</a></div>
+                    </div>
+                                        <div class="col-lg-12 cc_style">
+                	
+                    <div class="col-lg-5"><input type="radio" name="cc_id" class="cc_radio" onclick="paymentmethodcc('p_method_ccpayment');" value="cc_364" required="required" />
+					VISA ending with 0725</div>
+                    <div class="col-lg-3">Mansoor Mahmood</div>
+                    <div class="col-lg-2">04/2019</div>
+                    <div class="col-lg-1" style="float:right;cursor: pointer;"><a onclick="showEditCard(364)">Edit</a></div>
+                    </div>
+                                                            
+                                     </div>                    
+          </div>
+          <div class="clear"></div>
+          <br /><br /><br />
+            <dt style="margin-left:0px; height: 90px;">
+              <h3 style="float: left; cursor: pointer;" value="ccpayment">Pay By Credit Card (Secure) </h3>
+              <input style="float: left; display: none;" id="p_method_ccpayment" value="ccpayment" type="radio" name="payment_method" class="radio" required="required">
+              <div style="float:right"><img alt="" title="" src="images/credit_card_logos_11.gif" width="235" height="35" class="credit_card_logos" border="0" /></div>
+          <div class="a-row a-spacing-base"><br /><br />
+        Medical shipment accepts all major credit and debit cards: <br /><br>
+        <a onclick="paymentMethod('ccpayment')" style="cursor: pointer;" id="add_a_card">Add a card</a><br /><br />
+      </div>
+              
+            </dt>
+            <div id="cc_opt" style="margin-left: 0px; margin-top: 10px; overflow: auto;height: auto;">
+          <div class="a-row a-spacing-small" style="width: 350px; float: left;"> Enter your card information: </div>
+          <!--<a onclick="paymentMethod('ccpayment')"><img src="images/close-button.png" alt="Close" title="Close" style="width: 80px; cursor: pointer;" /></a>-->
+              <table id="tbl_address">
+              <tr><td><div id="card_error" style="color: red;"></div></td></tr>
+              <tr>
+              <td>
+                  <select name='card_name' id='card_name' class="continput text required">
+                      <option value=''>Select Card</option>
+                      <option value='American Express'>American Express</option>
+                      <option value='Diners Club'>Diners Club</option>
+                      <option value='Discover'>Discover</option>
+                      <option value='Diners Club Enroute'>Diners Club Enroute</option>
+                      <option value='JCB'>JCB</option>
+                      <option value='Maestro'>Maestro</option>
+                      <option value='MasterCard'>MasterCard</option>
+                      <option value='Solo'>Solo</option>
+                      <option value='VISA'>VISA</option>
+                      <option value='VISA Electron'>VISA Electron</option>
+                      <option value='LaserCard'>LaserCard</option>
+                    </select>
+                  </td>
+                </tr>
+                <tr>
+                  <td>
+                  <br />
+                  <input type="text" class="continput text required" placeholder="Name on Card" name="card_holder_name" id="card_holder_name" value="" />
+                  </td>
+                </tr>
+                <tr>
+                  <td>
+                  <br />
+                  <input type="text" class="continput text required creditcard error" placeholder="Credit Card Number" size="15" name="x_card_num" id="x_card_num" value="" /></td>
+                </tr>
+                <tr>
+                  <td>
+                  <br />
+                  <input type="text" class="continput text required creditcard error" placeholder="CVV Number" size="15" name="x_card_cvv" id="x_card_cvv" value="" /></td>
+                </tr>
+                <tr>
+                  <td><b>Expiration Date</b><br />
+                  <select name='x_exp_date_m' id='x_exp_date_m' class="continput text required">
+                      <option value=''>Month</option>
+                      <option value='01'>Janaury</option>
+                      <option value='02'>February</option>
+                      <option value='03'>March</option>
+                      <option value='04'>April</option>
+                      <option value='05'>May</option>
+                      <option value='06'>June</option>
+                      <option value='07'>July</option>
+                      <option value='08'>August</option>
+                      <option value='09'>September</option>
+                      <option value='10'>October</option>
+                      <option value='11'>November</option>
+                      <option value='12'>December</option>
+                    </select>
+                    <select name='x_exp_date_y' id='x_exp_date_y' class="continput text required">
+                      <option value=''>Year</option>
+                      <option value='16'>2016</option>
+                      <option value='17'>2017</option>
+                      <option value='18'>2018</option>
+                      <option value='19'>2019</option>
+                      <option value='20'>2020</option>
+                      <option value='21'>2021</option>
+                      <option value='22'>2022</option>
+                      <option value='23'>2023</option>
+                      <option value='24'>2024</option>
+                    </select></td>
+                  </tr>
+                
+                <tr>
+                <td><input id="ccAddCard" onclick="AddCard();" class="signin_btn" tabindex="0" type="button" value="Add your card"></td>
+                </tr>
+                
+              </table>
+            </div>
+            
+            <div id="cc_opt_edit" style="margin-left: 0px; margin-top: 10px; overflow: auto;height: auto;"></div>
+            
+            <hr class="a-spacing-base">
+            
+            <dt style="margin-left:0px; height: 70px;">
+              <h3 style="cursor: pointer;">Check / Money Order / Purchase Order </h3><br /><br />
+        	<a onclick="paymentMethod('checkmo')" style="cursor: pointer;" id="send_check">Send Check / Money order to medicalshipment</a><br />
+            <input style="float: left; display: none;" id="p_method_checkmo" value="checkmo" type="radio" name="payment_method" class="radio" required="required">
+            </dt>
+            <div id="mo_opt" style="margin-left: 0px;">
+            <!--<a onclick="paymentMethod('checkmo')"><img src="images/close-button.png" alt="Close" title="Close" style="width: 80px; cursor: pointer;" /></a>-->
+              <ul class="form-list checkmo-list" id="payment_form_checkmo"><br />
+              <li style="width: 25%; float: left;"><input type="radio" name="check" id="check_radio" value="Check" />Check</li>
+              <li style="width: 25%; float: left;"><input type="radio" name="check" id="moneyorder_radio" value="Money Order" />Money Order</li>
+              <li><input type="radio" name="check" id="po_radio" value="Purchase Order" />Purchase Order</li><br />
+                <li style="font-size:13px !important;" class="check_tab">
+                  <label style="font-size:13px !important;">Make Check Payable To:</label>
+                  <span style="text-transform:uppercase;">Medical Shipment</span> </li>
+                <li style="font-size:13px !important; width:356px;" class="check_tab">
+                  <label style="font-size:13px !important;">Send Check To:</label>
+                  <address class="checkmo-mailing-address" style="font-size:13px !important;">
+                  Medical Shipment<br>
+                  8060 Saint Louis Avenue<br>
+                  Skokie, IL 60076
+                  </address>
+                </li>
+                <li style="font-size:13px !important;" class="po_tab">
+                <input type="text" name="po_no" class="continput text" id="po_no" placeholder="Purchase Order No" /><br /><br />
+                <form id="poattachment"><input type="file" name="po_file" id="po_file" onchange="uploadImage(this.value)" /></form>
+                </li>
+              </ul>
+            </div>
+            
+            <hr class="a-spacing-base">
+            
+            <dt style="margin-left:0px; height: 100px;">
+              <h3 style="float: left; cursor: pointer;">Add a bank account</h3>
+              <input style="float: left; display: none;" id="p_method_echeckpayment" value="echeckpayment" type="radio" name="payment_method" class="radio" required="required">
+              
+              <div style="float:right"><img alt="" title="" src="images/echecks.gif" width="98" height="64" class="credit_card_logos" border="0" /></div>
+            <br /><br />
+            <div class="a-row a-spacing-base">Use your US based checking account.</div>
+        	<a onclick="paymentMethod('echeckpayment')" style="cursor: pointer;" id="checking_account">Add a checking account</a><br />
+            </dt>
+            <div id="ec_opt" style="margin-left: 0px;">
+            <div class="a-row a-spacing-base">
+          <div class="a-size-medium a-spacing-base" style="font-size: 18px; padding-bottom: 10px;">Where are my account numbers?
+            <!--<a onclick="paymentMethod('echeckpayment')"><img src="images/close-button.png" alt="Close" title="Close" style="width: 80px; cursor: pointer;" /></a>--> </div>
+          <img src="images/check-example.gif" >
+          <div>
+            <span class="a-size-mini"><strong> Bank Routing Number </strong></span>
+            <span class="a-size-mini account-number-on-image"><strong> Checking Account Number </strong></span>
+          </div>
+        </div>
+            
+              <ul id="payment_form_echeckpayment" style="">
+                <li>
+                <div id="bank_error" style="color: red;"></div>
+                  <div class="input-box">
+                    <br>
+                    <input id="echeckpayment_echeck_name_account" placeholder="Name on Account" name="echeckpayment_echeck_name_account" class="input-text" autocomplete="off">
+                  </div>
+                </li>
+                <li>
+                  <div class="input-box">
+                    <br>
+                    <input id="echeckpayment_echeck_routing_number" placeholder="Bank routing number" name="echeck_routing_number" class="input-text" autocomplete="off">
+                  </div>
+                </li>
+                <li>
+                  <div class="input-box">
+                    <br>
+                    <input id="echeckpayment_echeck_bank_acct_num" placeholder="Bank account number" name="echeck_bank_acct_num" class="input-text" autocomplete="off">
+                  </div>
+                </li>
+                <li>
+                  <div class="input-box">
+                    <br>
+                    <input id="echeckpayment_echeck_driver_license_number" placeholder="Driver's License Number" name="echeckpayment_echeck_driver_license_number" class="input-text" autocomplete="off">
+                  </div>
+                </li>
+                <li>
+                  <div class="input-box">
+                    <textarea class="a-spacing-micro text_areaabg" style="margin-top: 10px; margin-bottom: 10px;color: #000;text-transform: uppercase;"> BY CLICKING ON THE CONTINUE BUTTON, I AGREE TO THE TERMS AND CONDITIONS OF USING MY CHECKING ACCOUNT AS A PAYMENT METHOD, WHICH ARE LISTED BELOW, AND AUTHORIZE medicalshipment.com TO DEBIT MY CHECKING ACCOUNT FOR PURCHASES MADE ON medicalshipment.com, ANY medicalshipment.com AFFILIATE WEB SITE, OR THIRD PARTY WEB SITE USING AMAZON PAYMENTS.
+Welcome to the terms and conditions (the "Terms and Conditions") for use of a bank account registered with medicalshipment.com as a payment method on the medicalshipment.com website, any Amazon affiliate website, or third-party website. Please note that your use of the medicalshipment.com website is also governed by our Conditions of Use and Privacy Notice, as well as all other applicable terms, conditions, limitations and requirements contained on the medicalshipment.com website, all of which (as changed over time) are incorporated into these Terms and Conditions. If you choose to use a bank account as your payment method, you accept and agree to these Terms and Conditions.
+1. Bank Account Payments. By choosing to use a bank account as your payment method, you will be able to complete your purchase using any valid automated clearing house ("ACH") enabled bank account at a United States-based financial institution. Whenever you choose to pay for an order using your bank account, you are authorizing medicalshipment.com (or its agent) to debit your bank account for the total amount of your purchase (including applicable taxes, fees and shipping costs). Your transaction must be payable in U.S. dollars. medicalshipment.com, in its sole discretion, may refuse this payment option service to anyone or any user without notice for any reason at any time.
+2. ACH Authorization. By choosing your bank account as your payment method, you agree that: (a) you have read, understand and agree to these Terms and Conditions, and that this agreement constitutes a "writing signed by you" under any applicable law or regulation, (b) you consent to the electronic delivery of the disclosures contained in these Terms and Conditions, (c) you authorize medicalshipment.com (or its agent) to make any inquiries we consider necessary to validate any dispute involving your payment, which may include ordering a credit report and performing other credit checks or verifying the information you provide against third party databases, and (d) you authorize medicalshipment.com (or its agent) to initiate one or more ACH debit entries (withdrawals) or the creation of an equivalent bank draft for the specified amount(s) from your bank account, and you authorize the financial institution that holds your bank account to deduct such payments.
+3. Partial Debits and Returned Payments. If your full order is not processed by us at the same time, you hereby authorize partial debits from your bank account, not to exceed the total amount of your order. If any of your payments are returned unpaid, you authorize medicalshipment.com (or its agent) to make a one-time electronic fund transfer from your account to collect a return fee. This return fee will vary based on which state you are located in, as follows: $20 in CO, CT, ID, IN, NY and UT; $10 in Puerto Rico; and $25.00 for all other states. The return fee may be added to your payment amount and debited from your bank account if we resubmit an ACH debit due to insufficient funds. We may initiate a collection process or legal action to collect any money owed to us. You agree to pay all our costs for such action, including any reasonable attorneys' fees.
+4. Cancellations and Refunds. To cancel a purchase made on the medicalshipment.com website and request a refund, please follow the instructions and procedures contained on the medicalshipment.com website. When you cancel a purchase in accordance with these procedures, medicalshipment.com (or its agent) will initiate a credit to your bank account for the correct amount. For purchases made from a seller other than medicalshipment.com, please contact the seller regarding its policy on returns and refunds.
+5. Customer Service. Transactions that we process using your bank account will be identified as "Amazon" (or similar identifier) on the statement issued by your bank or other financial institution holding your account. All questions relating to any transactions made using your bank account by us should be initially directed to us. Save the order confirmations that you are provided when you make a purchase, and check them against your bank account statement. You may contact us regarding your medicalshipment.com orders or any payments made using your bank account and by writing to us at http://www.medicalshipment.com/contact-us. You may also view your transaction history for your medicalshipment.com order at any time in the "Your Account" area of the medicalshipment.com website.
+6. Transaction Errors. If you believe that any payment transaction initiated by medicalshipment.com (or its agent) with respect to your bank account is erroneous, or if you need more information about any such transaction, you should contact us as soon as possible as provided in Section 5 of these Terms and Conditions. Notify us at once if you believe the password associated with your medicalshipment.com customer account has been lost or stolen, or if someone has attempted (or may attempt) to make a transfer from your bank account to complete a purchase using your medicalshipment.com customer account without your permission. We reserve the right to cancel the ability to pay by bank account on medicalshipment.com or other website for any reason at any time.
+7. Your Liability for Unauthorized Transactions. Federal law limits your liability for any fraudulent, erroneous unauthorized transaction from your bank account based on how quickly you report it to your financial institution. As general rule, you should report any fraudulent, erroneous or unauthorized transactions to your bank within 60 days after the questionable transaction FIRST appeared on your bank account statement. You should contact your bank for more information about the policies and procedures that apply to your account and any unauthorized transactions, including any limits on your liability.
+8. Electronic Delivery of Future Disclosures. You agree to accept all disclosures and other communications between you and us on this website or at the primary e-mail address associated with your medicalshipment.com customer account. You should print and retain a copy of all such disclosures and communications.
+9. Agreement Changes. We may in our discretion change these Terms and Conditions, medicalshipment.com's Conditions of Use and/or its Privacy Notice at any time without notice to you. If any change is found to be invalid, void, or for any reason unenforceable, that change is severable and does not affect the validity and enforceability of any other changes or the remainder of these Terms and Conditions. We reserve the right to subcontract any of our rights or obligations under these Terms and Conditions. YOUR CONTINUED USE OF YOUR BANK ACCOUNT AS A PAYMENT METHOD ON medicalshipment.com OR OTHER SITES USING YOUR AMAZON ACCOUNT ARE ACCEPTED AFTER WE CHANGE THESE TERMS AND CONDITIONS, medicalshipment.com'S CONDITIONS OF USE AND/OR ITS PRIVACY NOTICE CONSTITUTES YOUR ACCEPTANCE OF THESE CHANGES. </textarea>
+                  </div>
+                </li>
+                <li>
+                  <div class="input-box">
+                    <br>
+                    <select id="echeckpayment_echeck_account_type" name="echeck_account_type" class="input-text validation-passed" autocomplete="off">
+                      <option value="">Select Account Type</option>
+                      <option value="CHECKING">Checking</option>
+                      <option value="BUSINESSCHECKING">Business checking</option>
+                      <option value="SAVINGS">Savings</option>
+                    </select>
+                  </div>
+                </li>
+                <li>
+                	<input id="ccAddBank" onclick="AddBank();" class="signin_btn" tabindex="0" type="button" value="Add your bank">
+                </li>
+              </ul>
+            </div>
+            
+            <hr class="a-spacing-base">
+            
+            <tr>
+              <td><b>&nbsp;</b></td>
+              <td><input type="submit" class="signin_btn" id="checkoutContinue" value="Continue" style="float: right;" /></td>
+            </tr>
+          <!--</form>-->
+          <br />
+                  <br />
+                                  </div>
+                
+              </div>
+            </div>
+            
+            <!--left_bigportion--><br>
+            <br>
+            <div class="left_bigportion2">
+                <span class="step-header amz-stepped">3</span>
+            <h4 style="font-size: 14px; font-weight: bold; margin-bottom: 10px!important; padding-bottom: 5px;">Review Items &amp; Shipping</h4>
+            <div class="col-lg-6">
+              
+                            <div style="float:none; clear:both;">
+                <div id="div_custom_img_3161" style="float:left; width:80px !important;"><a href="https://www.medicalshipment.com/index.php?controller=product&function=index&id=3161">
+                  <img src="assets/images/product/147916459_5a74bbe18dee7_649716055_1517599713.jpg" width="62" height="60"></a></div>
+                <div id="div_custom_3161" style="float:left; width:71%;  margin-bottom: 15px; line-height: 20px;">
+                  <input type="hidden" id="price_update_input_3161" value="94.99">
+                  <strong> Foley Catheter Kit, Latex, 5cc, Sterile, 14FR, 10/case                                    <b style="text-decoration:underline">
+                                    </b> <br>
+                  #8501css</strong><br>
+                  <strong style="color:#434343;"> $<span id="price_update_3161">
+                  94.99                  </span> </strong> <br>
+                  <strong>Quantity: </strong> <span style="" id="qty_change_3161">1</span>
+                  <input style="display:none;" class="qty_place_ordr" type="text" onkeyup="showHideUpdate(3161)" name="qty_place_order_3161" id="qty_place_order_3161" value="1">
+                  <span class="updatqty" id="updateQty_3161" style="display:none" onclick="updateQty(3161);">Update</span> <span id="del_link_3161" style=" display:none;color:#0088CC;cursor: pointer;" onclick="delete_item('3161')" title="Remove Item" class="del_button_new btn-remove">| Delete</span>
+                  <p class="f-left1"><a onclick="change_item(3161);" id="change_link_3161" style="display: block;">Change</a></p>
+                </div>
+              </div>
+              
+                            <div style="float:none; clear:both;">
+                <div id="div_custom_img_3500" style="float:left; width:80px !important;"><a href="https://www.medicalshipment.com/index.php?controller=product&function=index&id=3500">
+                  <img src="assets/images/product/43179387_5b6b39bc47146_62523411_1533753788.jpeg" width="62" height="60"></a></div>
+                <div id="div_custom_3500" style="float:left; width:71%;  margin-bottom: 15px; line-height: 20px;">
+                  <input type="hidden" id="price_update_input_3500" value="3.99">
+                  <strong> B Braun Ecoflac Plus Intravenous IV Solution, 0.9% Sodium Chloride, 500 mL, 1/each                                    <b style="text-decoration:underline">
+                                    </b> <br>
+                  #130785</strong><br>
+                  <strong style="color:#434343;"> $<span id="price_update_3500">
+                  3.99                  </span> </strong> <br>
+                  <strong>Quantity: </strong> <span style="" id="qty_change_3500">1</span>
+                  <input style="display:none;" class="qty_place_ordr" type="text" onkeyup="showHideUpdate(3500)" name="qty_place_order_3500" id="qty_place_order_3500" value="1">
+                  <span class="updatqty" id="updateQty_3500" style="display:none" onclick="updateQty(3500);">Update</span> <span id="del_link_3500" style=" display:none;color:#0088CC;cursor: pointer;" onclick="delete_item('3500')" title="Remove Item" class="del_button_new btn-remove">| Delete</span>
+                  <p class="f-left1"><a onclick="change_item(3500);" id="change_link_3500" style="display: block;">Change</a></p>
+                </div>
+              </div>
+              
+                          </div>
+            <div class="col-lg-6" style="width: 54%;">
+            	
+            </div>
+            </div>
+            
+            
+            <!--left_bigportion--> 
+            
+            <!--<a onclick="history.back();">
+            <button class="signin_btn submit_helper" title="Back" type="submit">Back</button>
+            </a> -->
+            <div class="left_bigportion2" style="/* width: 280px;bottom: 0px;position: absolute;right: 0; */">
+              <div id="review-buttons-container" style="position: relative; top: 0px; left: 25px; width: 260px;float: left;" class=""> <a>
+                <button onclick="review.save();" class="placeorder_btn" title="Place Order" type="submit" style="margin-top: 15px;"><span style="display:inline-table; padding-left: 2px;color:white;opacity: 0.5;">Place Order</span></button>
+                </a><br>
+                <span class="please-wait" id="review-please-wait" style="position: relative; left: -88px; display: none;"> <img src="https://www.medicalshipment.com/skin/frontend/default/medicalshipment2012/images/opc-ajax-loader.gif" alt="Submitting order information..." title="Submitting order information..." class="v-middle"> Submitting order information... </span> <br>
+                <br>
+              </div>
+              <p style="font-size: 16px; line-height: 25px;margin-top: 10px;"><b style="color: brown;">Order Total: $<span id="order_total_bottom">98.98</span></b></p>
+              <p style="font-size: 9px;">By placing your order, you agree to medicalshipment.com's <a href="https://www.medicalshipment.com/index.php?controller=content&function=index&slug=term-conditions">privacy notice</a> and <a href="https://www.medicalshipment.com/index.php?controller=content&function=index&slug=privacy-policy">conditions of use</a>.</p>
+            </div>
+          </div>
+          <div class="col-lg-4 right_bigportion">
+            <div id="tour_div_11" class="stanrd_shipingsmall" style="float:right;width:280px;position:relative">
+              <div id="review-buttons-container" style="position: relative; top: 10px; left: 30px; height: 50px;" class=""> <a>
+                <button onclick="review.save();" class="placeorder_btn" title="Place Order" type="submit"><span style="display:inline-table; padding-left: 2px;color:white;opacity: 0.5;">Place Order</span></button>
+                </a><br />
+                <br />
+                <br />
+              </div>
+              <p style="margin: 0 15px; border-bottom: 1px solid #CCC; padding: 5px 0 10px 0; font-size: 9px;text-align: center;">By placing your order, you agree to medicalshipment.com's <a href="https://www.medicalshipment.com/index.php?controller=content&function=index&slug=term-conditions">privacy notice</a> and <a href="https://www.medicalshipment.com/index.php?controller=content&function=index&slug=privacy-policy">conditions of use</a>.</p>
+              <h1 class="shiping_haad" style="font-size: 13px !important; color: #0d0d0d;font-family: Arial,sans-serif;">Order Summary</h1>
+              <br style="clear:both;">
+              <div style="float:left; width:190px; height:auto;">
+                <table style="width:400px; float:left;">
+                  <tbody>
+                    <tr align="left" width="20%" style="margin-top:10px !important;">
+                      <td width="150"> Items (<span id="cart_quantity_updated">2</span>): </td>
+                      <td colspan="2">&nbsp;</td>
+                      <td width="120" style="position:absolute;right:15px;"><span style="float:right;"> $<span id="total_amount">98.98</span></span></td>
+                    </tr>
+                    <tr align="left" width="20%">
+                      <td width="150"> Shipping &amp; handling: </td>
+                      <td colspan="2">&nbsp;</td>
+                      <td width="120" style="position:absolute;right:15px;"><span style="float:right;"> $<span id="tax_amount">0.00</span></span></td>
+                    </tr>
+                    <tr class="stnrad_table" style="float: left; margin-bottom: 10px; margin-top: 10px; width: 241px;"></tr>
+                    <!--<tr class="line" width="51%">
+
+                      <td colspan="2">&nbsp;</td>
+
+                    </tr>-->
+                    
+                    <tr align="left" width="20%">
+                      <td width="150"> Total before Tax: </td>
+                      <td colspan="2">&nbsp;</td>
+                      <td width="120" style="position:absolute;right:15px;"><span style="float:right;"> $<span id="total_befor_tax">98.98</span></span></td>
+                    </tr>
+                    <tr align="left" width="20%">
+                      <td width="170"> Estimated Tax to be calculated: </td>
+                      <td colspan="2">&nbsp;</td>
+                      <td width="120" style="position:absolute;right:15px;"><span style="float:right;">$<span id="tax_ammnt_new">0.00</span></span></td>
+                    </tr>
+                                      </tbody>
+                </table>
+                <div class="stnrad_table" style="float: left; margin-bottom: 10px; margin-left: 18px; width: 241px;"></div>
+                <table style="width:400px; float:left;">
+                  <tbody>
+                    <tr align="left" width="20%">
+                      <td width="150" style="font-size: 16px; font-weight: bold;"><b style="color: brown;">Order Total:</b></td>
+                      <td colspan="2">&nbsp;</td>
+                      <td id="order_total_clr" class="order_total_clr" width="120" style="position:absolute;right:15px; font-size: 16px; font-weight: bold;"><span style="float:right; color: brown;"> $<span id="grand_total_amount_after_tax" style="color: brown;">98.98</span></span><br></td>
+                    </tr>
+                  </tbody>
+                </table>
+              </div>
+              <div id="checkout-review-submit">
+                <form action="" id="checkout-agreements" onsubmit="return false;">
+                  <ol class="checkout-agreements">
+                  </ol>
+                </form>
+              </div>
+            </div>
+            
+            <!--stanrd_shiping-->
+            <div class="clear"></div>
+            </div>
+          
+          </div>
+          
+        </div>
+        
+        <!--bodycontent-->
+        
+        <div class="contentbot"></div>
+      </div>
+      
+      <!--content End--> 
+      
+    </div>
+  </div>
+</div>
+

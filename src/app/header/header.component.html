@@ -2,9 +2,9 @@
   <div class="row">
     <div class="container top-con" style="background: transparent;">
       <div class="col-lg-3 med-logo">
-        <a href=""
+        <a class="cp"
           ><img
-            src="../../assets/images/ms_o31.png"
+            src="assets/images/ms_o31.png"
             class="img-responsive"
             alt="Logo"
             id="logo"
@@ -284,14 +284,14 @@
       </div>
       <div class="col-rg-3">
         <div class="arrow-head2 left p-right nav-popup">
-          <a href="index.php?controller=login&function=index">
+          <a class="cp">
             <p>Hello, Sign in <strong>Your Account</strong></p>
           </a>
           <div id="menu1choices_1" class="menudropdown">
             <div class="nav-arrow-inner"></div>
             <div id="nav-flyout-ya-signin" style="text-align: center;">
               <a
-                href=""
+                class="cp"
                 rel="nofollow"
                 class="nav-action-button"
                 data-nav-role="signin"
@@ -305,7 +305,7 @@
                 style="font-size: 12px;"
               >
                 New customer?<a
-                  href=""
+                  class="cp"
                   class="start_here"
                   >Start here</a
                 >
@@ -316,14 +316,14 @@
         <div class="arrow-head4 left p-right nav-popup quote">
           <p>
             <a
-              href=""
+              class="cp"
               ><strong>Add to Quote</strong></a
             >
           </p>
           <div id="menu1choices_2" class="menudropdown">
             <div class="nav-arrow-inner" id="quote_arraow"></div>
             <a
-              href=""
+              class="cp"
             >
               <p class="btn_quote"></p>
             </a>
@@ -334,12 +334,12 @@
           <div id="menu1choices_3" class="menudropdown">
             <div class="nav-arrow-inner" id="wishlist_arraow"></div>
             <a
-              href=""
+              class="cp"
             >
               <p class="btn_wishlist"></p>
             </a>
             <a
-              href=""
+              class="cp"
               style="color: #428bca;"
             >
               Create a Wish List
@@ -347,14 +347,15 @@
           </div>
         </div>
         <div class="nav-popup cart-txt cart-img">
-          <a href="index.php?controller=cart&function=index">
-            <span id="shopping_cart_menu">0</span>
-            <p class="shopping_tabho" onMouseOver=""></p
+          <a  (mouseover)="getCartItems()">
+            <span id="shopping_cart_menu">{{ cartQty$.cartQty | async }}</span>
+            <p class="shopping_tabho"></p
           ></a>
           <div
             id="cart_menu"
             class="menudropdown"
             style="margin-left: -10%; width: 255px;"
+            [innerHtml]="cartData"
           ></div>
         </div>
       </div>
