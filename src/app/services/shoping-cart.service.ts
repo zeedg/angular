@@ -44,8 +44,7 @@ export class ShopingCartService {
     if(this.getCartData()){
       let cartDataArr = [];
       cartDataArr = JSON.parse(localStorage.getItem('cartData'));
-      cartDataArr.push(cartData)
-      console.log(cartDataArr);
+      cartDataArr.push(cartData);
       localStorage.setItem('cartData', JSON.stringify(cartDataArr));
     }else{
       localStorage.setItem('cartData', JSON.stringify(cartData));
@@ -67,6 +66,17 @@ export class ShopingCartService {
       //   console.log(data.cartQty);
       //   localStorage.setItem('cartQty', data.cartQty);
       // });
+  }
+
+  getCartAddedData(){
+    let cartDataArr = this.getCartData();
+    let user_id = this.cookieService.get('user_id');
+    let user_fname = this.cookieService.get('user_fname');
+    cartDataArr.unshift({
+      user_id: user_id,
+      user_fname: user_fname
+    });
+    return this.http.post(`${this.apiUrl}/cart/cart_added_data`,cartDataArr);
   }
 
   // getCartQty(){

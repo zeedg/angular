@@ -3,7 +3,6 @@ import { DataStorageService } from './../services/data-storage.service';
 import { ShopingCartService } from '../services/shoping-cart.service';
 import { DomSanitizer, SafeHtml } from '@angular/platform-browser';
 import { Router } from '@angular/router';
-import { Observable } from 'rxjs';
 
 
 @Component({
@@ -14,7 +13,6 @@ import { Observable } from 'rxjs';
 export class HeaderComponent implements OnInit, AfterViewInit {
   categories = [];
   cartData: SafeHtml;
-  cartQty$: Observable<any>;
   constructor(
     private dsService: DataStorageService,
     private scService: ShopingCartService,
@@ -26,10 +24,9 @@ export class HeaderComponent implements OnInit, AfterViewInit {
       .subscribe((data:any)=>{
         this.categories = data.categories;
       });
-    this.cartQty$ = this.scService.getCartQty();  
     this.scService.getCartQty()
       .subscribe((data:any)=>{
-        console.log(data);
+        console.log(data.cartQty);
       });
   }
 
@@ -54,4 +51,5 @@ export class HeaderComponent implements OnInit, AfterViewInit {
     //   });
     // });
   }
+
 }

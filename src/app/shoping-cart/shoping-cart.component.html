@@ -22,43 +22,58 @@
                     </tr>
                   </thead>
                   <tbody>
-                    <tr class="first odd">
-                      <td><input type="checkbox" name="quoteProduct3500" class="quoteProduct" id="quoteProduct3500"
-                          value="3500" onclick="quoteProduct(3500);" /></td>
-                      <td><a href="https://www.medicalshipment.com/index.php?controller=product&function=index&id=3500">
+                    <tr class="first odd" *ngFor="let cartData of cartAddedData; let i=index">
+                      <td>
+                        <input type="checkbox" [name]="'quoteProduct'+cartData[i].product_id" class="quoteProduct" [id]="'quoteProduct'+cartData[i].product_id"
+                          [value]="cartData[i].product_id" (click)="quoteProduct(cartData[i].product_id);" />
+                      </td>
+                      <td>
+                        <a>
                           <img
-                            src="http://localhost/med/admin/images/product/43179387_5b6b39bc47146_62523411_1533753788.jpeg"
+                            [src]="'assets/images/product/'+cartData[i].product_image"
                             alt="B Braun Ecoflac Plus Intravenous IV Solution, 0.9% Sodium Chloride, 500 mL, 1/each"
                             class="img-responsive" width="100" height="100"> </a></td>
-                      <td><a
-                          href="https://www.medicalshipment.com/index.php?controller=product&function=index&id=3500">B
-                          Braun Ecoflac Plus Intravenous IV Solution, 0.9% Sodium Chloride, 500 mL, 1/each</a>
+                      <td>
+                        <a>
+                          {{ cartData[i].product_title }}  
+                        </a>
                       </td>
                       <td>
-
-                        <a onclick="document.getElementById('form_whish_3500').submit();">Move</a></td>
-                      <td><span class="price">$3.99</span></td>
+                        <a>Move</a>
+                      </td>
+                      <td><span class="price">${{cartData[i].product_price}}</span></td>
                       <td>
                         <div class="form-group form-group-options">
-                          <div id="1" class="input-group input-group-option quantity-wrapper"> <span
-                              class="input-group-addon input-group-addon-remove quantity-remove btn" id="minus_cart"
-                              onclick="minus_cart(3500, 7);"> <span class="glyphicon glyphicon-minus"></span> </span>
-                            <input id="1inp3500" type="text" value="1" onkeypress="showUpdateButton(3500)"
-                              name="qnty_3500" class="form-control quantity-count" style="margin:0;">
-                            <span class="input-group-addon input-group-addon-remove quantity-add btn" id="plus_cart"
-                              onclick="plus_cart(3500, 7)"> <span class="glyphicon glyphicon-plus"></span> </span>
+                          <div id="1" class="input-group input-group-option quantity-wrapper"> 
+                            <span
+                              class="input-group-addon input-group-addon-remove quantity-remove btn" 
+                              id="minus_cart"> 
+                              <span class="glyphicon glyphicon-minus"></span> </span>
+                            <input 
+                              [id]="'1inp'+cartData[i].product_id" type="text" 
+                              [value]="cartData[i].product_quantity"
+                              [name]="'qnty_'+cartData[i].product_id" 
+                              class="form-control quantity-count" style="margin:0;">
+                            <span class="input-group-addon input-group-addon-remove quantity-add btn" 
+                              id="plus_cart"> <span class="glyphicon glyphicon-plus"></span></span>
                           </div>
-                          <a style="display: none; position: absolute; margin-left: 33px;" id="update_3500"
-                            href="javascript:updateCartServer(3500, 7)">Update</a> <span
-                            style="display: none; color:#F00; position: absolute; margin-left: 33px;"
-                            id="save_3500">Saved</span>
+                          <a style="display: none; position: absolute; margin-left: 33px;" 
+                            [id]="'update_'+cartData[i].product_id">Update</a> 
+                            <span
+                              style="display: none; color:#F00; position: absolute; margin-left: 33px;"
+                              [id]="'save_'+cartData[i].product_id">Saved</span>
                         </div>
                       </td>
-                      <td><span class="price" id="price_3500">
-                          $3.99 </span></td>
-                      <td><a
-                          href="https://www.medicalshipment.com/index.php?controller=cart&function=remove&product_id=3500&unit_id=7"
-                          title="Remove Item" class="btn-remove btn-remove2">Remove Item</a></td>
+                      <td>
+                        <span class="price" 
+                          id="'price_'+cartData[i].product_id">
+                          ${{ cartData[i].product_total }} </span></td>
+                      <td>
+                        <a
+                          title="Remove Item" 
+                          class="btn-remove btn-remove2">Remove Item
+                        </a>
+                      </td>
                     </tr>
                   </tbody>
                 </table>
@@ -123,7 +138,7 @@
                     <tbody>
                       <tr class="cartbotborder">
                         <td style="" class="a-right" colspan="1"> Subtotal </td>
-                        <td style="" class="a-right" id="sveUkupno_sub"><span class="price" id="subtotal">$3.99</span></td>
+                        <td style="" class="a-right" id="sveUkupno_sub"><span class="price" id="subtotal">${{ getSubTotal() }}</span></td>
                       </tr>
                       <!--<tr class="cartbotborder">
                                           <td style="" class="a-right" colspan="1"> Grand Total </td>

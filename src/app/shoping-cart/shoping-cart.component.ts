@@ -7,14 +7,33 @@ import { ShopingCartService } from './../services/shoping-cart.service';
   styleUrls: ['./shoping-cart.component.css']
 })
 export class ShopingCartComponent implements OnInit {
-
+  // cartAddedData: SafeHtml;
+  cartAddedData: [];
+  // totalQty = 0;
   constructor(
     private scService: ShopingCartService
   ) { }
 
   ngOnInit() {
-    let cartData = this.scService.getCartData();
-    console.log(cartData);
+    this.scService.getCartAddedData()
+      .subscribe((data: any)=>{
+        this.cartAddedData = data.cart_return;
+        console.log(data.cart_return);
+          // this.cartAddedData = this.sanitizer.bypassSecurityTrustHtml(data.cart_return);
+      });
+  }
+
+  getSubTotal(){
+    let totalQty = 0;
+    if (this.cartAddedData){
+      this.cartAddedData.forEach(function(data:any,i){
+        data.forEach(function(d){
+          console.log(d);
+          totalQty += +d.product_price;
+        })
+      });
+      return totalQty;
+    }
   }
 
 }
